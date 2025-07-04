@@ -10,7 +10,7 @@ This application is built using **FastAPI** to process and extract structured da
 
 The application reads a financial Excel file located at `/data/capbudg.xls`, identifies multiple semantically distinct tables within it (e.g., *Initial Investment*, *Growth Rates*, *Cashflow Details*, etc.), and exposes RESTful endpoints to list tables, explore row headings, and compute numeric summaries.
 
---
+---
 
 ## Project Structure
 fastapi_excel_processor/
@@ -41,10 +41,25 @@ git clone https://github.com/AKP271003/fastapi_excel_processor
 cd fastapi_excel_processor
 ```
 
-2. Create a Virtual Environment (optional but recommended)
-bash
-Copy
-Edit
+### 2. Create a Virtual Environment (optional but recommended)
+```bash
 python -m venv venv
 source venv/bin/activate          # Linux/Mac
 venv\Scripts\activate             # Windows
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+Make sure xlrd is installed to support .xls file parsing.
+
+### 4. Run the FastAPI Application
+```bash
+chmod +x run.sh         # Only for Linux/Mac
+./run.sh
+```
+# OR
+```
+uvicorn app.main:app --host 0.0.0.0 --port 9090
+```
