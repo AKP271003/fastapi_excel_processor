@@ -1,4 +1,4 @@
-# FastAPI Excel Processor Assignment
+# FastAPI Excel Processor
 
 ## Overview
 
