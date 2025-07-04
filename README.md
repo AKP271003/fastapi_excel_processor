@@ -69,11 +69,9 @@ uvicorn app.main:app --host 0.0.0.0 --port 9090
 
 http://localhost:9090
 
----
+### API Endpoints
 
-## API Endpoints
-
-### 1. GET /list_tables
+#### 1. GET /list_tables
 Description: Lists all detected table names in the Excel sheet.
 
 Response Example:
@@ -87,7 +85,7 @@ Response Example:
 }
 ```
 
-### 2. GET /get_table_details
+#### 2. GET /get_table_details
 Query Parameters:
 
 table_name (str): Name of the table to fetch row headings for.
@@ -115,7 +113,7 @@ Response Example:
 }
 ```
 
-### 3. GET /row_sum
+#### 3. GET /row_sum
 Query Parameters:
 
 table_name (str): Name of the table
