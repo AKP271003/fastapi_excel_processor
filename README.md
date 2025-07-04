@@ -182,15 +182,13 @@ To test the API quickly:
 
 
 ## Missed Edge Cases
-- Empty Excel files (graceful error messaging not fully implemented)
+- Empty Excel files
 
-- Tables with no numeric cells (e.g., purely textual data)
+- Tables with no numeric cells
 
 - Duplicate table headers are ignored silently
 
 - Malformed cell contents (e.g., 'N/A', 'five') may affect summation
-
-- Mixed-language (non-English) content is not supported for heading detection
 
 ---
 
