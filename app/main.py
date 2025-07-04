@@ -1,3 +1,6 @@
+import logging
+logging.getLogger().setLevel(logging.ERROR)
+
 from fastapi import FastAPI
 from app.endpoints import router as api_router
 
