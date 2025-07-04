@@ -71,7 +71,7 @@ def extract_tables_from_excel(file_path):
                     last_data_col = c_idx
                     while last_data_col < df.shape[1] and df.iat[first_r_idx, last_data_col].strip() != '':
                         last_data_col += 1
-                    last_data_col -= 1  # Adjust to last valid column
+                    last_data_col -= 1
 
                     filtered_row_headings = []
                     for r_idx, heading in row_headings:
@@ -101,15 +101,12 @@ def extract_tables_from_excel(file_path):
                                 "start_col": col_idx,
                                 "width": table_width
                             }]
-                        # else: do nothing (skip duplicates)
 
     return tables
 
-# Load tables once at startup for performance
 TABLES_CACHE = extract_tables_from_excel(EXCEL_PATH)
 
 def get_table_matches(table_name: str):
-    # Fuzzy match to support case-insensitive and partial matches
     matches = []
     for tname in TABLES_CACHE.keys():
         if table_name.lower() == tname.lower():
