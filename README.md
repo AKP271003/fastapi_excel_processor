@@ -89,7 +89,7 @@ Response Example:
 #### 2. GET /get_table_details
 Query Parameters:
 
-table_name (str): Name of the table to fetch row headings for.
+- table_name (str): Name of the table to fetch row headings for.
 
 Description: Returns the row names from the specified table.
 
@@ -117,9 +117,9 @@ Response Example:
 #### 3. GET /row_sum
 Query Parameters:
 
-table_name (str): Name of the table
+- table_name (str): Name of the table
 
-row_name (str): Row heading whose values you want to sum
+- row_name (str): Row heading whose values you want to sum
 
 Description: Computes and returns the sum of all numeric values found in the specified row.
 
@@ -140,7 +140,7 @@ Note: Percent values like "5%" are interpreted as 5.0. Percent symbols are strip
 
 ---
 
-## Postman Collection
+### Postman Collection
 To test the API quickly:
 
 1. Open Postman
@@ -149,11 +149,11 @@ To test the API quickly:
 
 3. Hit send on endpoints:
 
-    /list_tables
+    - /list_tables
 
-    /get_table_details?table_name=Initial Investment
+    - /get_table_details?table_name=Initial Investment
 
-    /row_sum?table_name=Initial Investment&row_name=Tax Credit (if any )=
+    - /row_sum?table_name=Initial Investment&row_name=Tax Credit (if any )=
 
 ---
 
