@@ -13,23 +13,26 @@ The application reads a financial Excel file located at `/data/capbudg.xls`, ide
 ---
 
 ## Project Structure
+
+```bash
 fastapi_excel_processor/
 │
 ├── app/
-│ ├── main.py # FastAPI app definition
-│ ├── config.py # Constants and configuration
-│ ├── parser.py # Table extraction and helper logic
-│ ├── endpoints.py # API endpoint route definitions
+│   ├── main.py                # FastAPI app definition
+│   ├── config.py              # Constants and configuration
+│   ├── parser.py              # Table extraction and helper logic
+│   ├── endpoints.py           # API endpoint route definitions
 │
 ├── data/
-│ └── capbudg.xls # Input Excel file (provided)
+│   └── capbudg.xls            # Input Excel file (provided)
 │
 ├── postman/
-│ └── ExcelProcessor.postman_collection.json # Postman collection for testing
+│   └── ExcelProcessor.postman_collection.json  # Postman collection for testing
 │
-├── requirements.txt # Python dependencies
-├── run.sh # Startup script for the API
-└── README.md # Documentation
+├── requirements.txt           # Python dependencies
+├── run.sh                     # Startup script for the API
+└── README.md                  # Documentation
+```
 
 ---
 
