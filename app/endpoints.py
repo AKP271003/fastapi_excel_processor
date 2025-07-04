@@ -14,7 +14,6 @@ def get_table_details(table_name: str = Query(..., description="Name of the tabl
     matches = get_table_matches(table_name)
     if not matches:
         raise HTTPException(status_code=404, detail="Table not found")
-    # Only use the first occurrence (since only one per table)
     tinfo = TABLES_CACHE[matches[0]][0]
     return {"table_name": matches[0], "row_names": tinfo['row_headings']}
 
@@ -23,7 +22,7 @@ def row_sum(
     table_name: str = Query(..., description="Name of the table"),
     row_name: str = Query(..., description="Name of the row")
 ):
-    """Calculate and return the sum of all numerical data points in the specified row."""
+    """Calculate and return the sum of all numerical data points in the row."""
     matches = get_table_matches(table_name)
     if not matches:
         raise HTTPException(status_code=404, detail="Table not found")
