@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "Excel Processor API",
+    "_postman_id": "2b9e2c34-7cd3-4b0c-93df-1d1d07ec4620",
+    "description": "Postman collection for Excel Processor Assignment (FastAPI)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List All Tables",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/list_tables",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["list_tables"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Table Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/get_table_details?table_name=Initial%20Investment",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["get_table_details"],
+          "query": [
+            {
+              "key": "table_name",
+              "value": "Initial Investment"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Row Sum",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/row_sum?table_name=Initial%20Investment&row_name=Tax%20Credit%20(if%20any%20)=",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["row_sum"],
+          "query": [
+            {
+              "key": "table_name",
+              "value": "Initial Investment"
+            },
+            {
+              "key": "row_name",
+              "value": "Tax Credit (if any )="
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
