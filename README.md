@@ -10,6 +10,8 @@ This application is built using **FastAPI** to process and extract structured da
 
 The application reads a financial Excel file located at `/data/capbudg.xls`, identifies multiple semantically distinct tables within it (e.g., *Initial Investment*, *Growth Rates*, *Cashflow Details*, etc.), and exposes RESTful endpoints to list tables, explore row headings, and compute numeric summaries.
 
+--
+
 ## Project Structure
 fastapi_excel_processor/
 │
