@@ -138,7 +138,6 @@ Response Example:
 ```
 Note: Percent values like "5%" are interpreted as 5.0. Percent symbols are stripped before summing.
 
----
 
 ### Postman Collection
 To test the API quickly:
@@ -166,7 +165,6 @@ To test the API quickly:
 
 4. Value Normalization: Converts 0.05 → 5% for clarity.
 
----
 
 ## Potential Improvements
 1. Support for .xlsx and Google Sheets using openpyxl or gspread.
@@ -179,7 +177,6 @@ To test the API quickly:
 
 5. Authentication for sensitive financial data.
 
----
 
 ## Missed Edge Cases
 - Empty Excel files (graceful error messaging not fully implemented)
@@ -203,5 +200,5 @@ You can manually test using:
 
 ---
 
-Author
+#### Author
 Aniket Kumar Pandey
